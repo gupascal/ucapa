@@ -6,8 +6,8 @@
 language: cpp
 
 compiler:
-  - gcc
-#  - clang # Temporary disabled
+#  - gcc # Temporary disabled
+  - clang
 
 #branches:
 # only:
