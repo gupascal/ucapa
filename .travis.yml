@@ -14,7 +14,7 @@ compiler:
 # - master
 
 before_install:
-  - sudo apt-add-repository --remove http://www.rabbitmq.com
+  - sudo apt-add-repository --remove http://www.rabbitmq.com/debian/dists/testing/
   - sudo apt-get update -qq
 
 install:
