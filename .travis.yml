@@ -14,7 +14,7 @@ compiler:
 # - master
 
 before_install:
-  - sudo apt-get-repository --remove www.rabbitmq.com
+  - sudo apt-add-repository --remove www.rabbitmq.com
   - sudo apt-get update -qq
 
 install:
