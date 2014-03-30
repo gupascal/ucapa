@@ -39,7 +39,7 @@ before_script:
   - wget ffmpeg.org/releases/ffmpeg-2.2.tar.bz2 -O ffmpeg-2.2.tar.bz2
   - tar -xvf ffmpeg-2.2.tar.bz2 -C external/
   - cd external/ffmpeg-2.2/
-  - ./configure --prefix=../ffmpeg --enable-pic --disable-programs --disable-doc
+  - ./configure --prefix=../ffmpeg --enable-pic --enable-shared --disable-programs --disable-doc
   - make -j6
   - make install
   - cd ../../
