@@ -19,6 +19,7 @@ include_directories(${ASIO_INCLUDE_DIR})
 include_directories(${FFMPEG_INCLUDE_DIR})
 
 # Customize build options
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_CONSTANT_MACROS")
 if (CMAKE_COMPILER_IS_GNUCXX OR MINGW OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
 	add_definitions("-std=c++11")
 	add_definitions("-Wall")
