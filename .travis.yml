@@ -9,11 +9,6 @@ compiler:
   - gcc
 #  - clang # Temporary disabled
 
-env:
-  - BUILD_SHARED_LIBS = true
-  - BUILD_SHARED_LIBS = "true"
-#  - BUILD_SHARED_LIBS = false
-
 #branches:
 # only:
 # - master
@@ -44,7 +39,8 @@ before_script:
   - wget ffmpeg.org/releases/ffmpeg-2.2.tar.bz2 -O ffmpeg-2.2.tar.bz2
   - tar -xf ffmpeg-2.2.tar.bz2 -C external/
   - cd external/ffmpeg-2.2/
-  - ./configure --prefix=../ffmpeg --enable-pic --enable-shared --disable-programs --disable-doc
+#  - ./configure --prefix=../ffmpeg --enable-pic --enable-shared --disable-programs --disable-doc
+  - ./configure --prefix=../ffmpeg --disable-programs --disable-doc
   - make -j6
   - make install
   - cd ../../
@@ -52,5 +48,6 @@ before_script:
 script:
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=${BUILD_SHARED_LIBS}
+#  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=TRUE
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=FALSE
   - make VERBOSE=1 -j 4
