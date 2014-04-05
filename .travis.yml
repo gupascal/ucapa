@@ -48,6 +48,6 @@ before_script:
 script:
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=TRUE
-#  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=FALSE
+#  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=TRUE
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=FALSE
   - make VERBOSE=1 -j4
