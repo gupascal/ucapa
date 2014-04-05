@@ -19,6 +19,7 @@ before_install:
 
 install:
 #  - sudo apt-get install libavcodec-dev libavformat-dev libavutil-dev libswscale-dev
+  - sudo apt-get install libbz2-dev
   - sudo apt-get install yasm libva-dev zlib1g-dev
   # We need cmake >= 2.8.9
   - sudo apt-add-repository "deb http://archive.ubuntu.com/ubuntu quantal main restricted"
